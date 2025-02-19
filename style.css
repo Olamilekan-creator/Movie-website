@@ -11,11 +11,19 @@ html {
   background-color: black;
 }
 
+#landing-page {
+    height: 100vh;
+}
+
 #personal-logo {
   width: 50px;
   height: 50px;
   line-height: 0.5;
   margin: 0 20px;
+}
+
+.orange {
+    color: #ff7518;
 }
 
 nav {
@@ -142,7 +150,7 @@ button {
   justify-content: center;
   text-align: center;
   align-items: center;
-  height: 60vh;
+  height: 57vh;
 }
 
 .header__description--title {
@@ -156,7 +164,7 @@ button {
     position: relative;
   width: 100%;
   height: 35vh;
-  border: 1px solid white;
+  border: 1px solid transparent;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -164,18 +172,19 @@ button {
 
 .movie__description {
     position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    transition: bottom 0.3s ease;
+   top: 50%;
+   transform: translateY(100%);
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: #fff;
+   text-align: center;
+   padding: 20px;
+   transition: transform 0.5s ease;
 }
 
-.movie__one .movie__description {
-    bottom: 0;
+.movie__one:hover .movie__description {
+   transform: translateY(-50%);
 }
 
 .movie__one {
@@ -185,54 +194,81 @@ button {
 .movie1 {
   width: 306.4px;
   height: 343.34px;
-  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-
-/* .movie__wrapper:hover .movie__description--title {
-  opacity: 1;
-  transform: translateY(-50%);
-}
-
-.movie__wrapper .movie1 {
-  transform: scale(1.07);
-}
-
 .movie__description--title {
-  position: absolute;
-  top: 15%;
-  transform: translateY(-50%);
-  color: white;
-  opacity: 0;
-  transition: opacity 300ms, transform 450ms ease;
-  font-size: 25px;
+font-size: 22px;
+margin: 15px 0;
+font-weight: bold;
 }
 
 .movie__btn {
-  transition: opacity 300ms, transform 450ms ease;
-  opacity: 0;
-  font-size: 20px;
-  margin-right: 16px;
-  transform: translateY(-50%);
-  position: absolute;
+    font-size: 18px;
+    padding: 8px 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 20px 0;
+    background-color: #ff7518;
 }
 
 .movie__para {
-  transition: opacity 300ms, transform 450ms ease;
-  opacity: 0;
-  margin-top: 8px;
-  transform: translateY(-50%);
-  position: absolute;
+    font-size: 17px;
+    margin: 12px 0;
 }
 
-.movie__wrapper--bg {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+/* ABOUT */
+
+.about__container {
+    background-color: black;
+    height: 100vh;
+    text-align: center;
+    padding: 65px 0;
 }
 
-.movie__wrapper .movie__wrapper--bg {
-  opacity: 0.7;
-} */
+.about__description {
+    font-size: 17px;
+    color: grey;
+}
+
+.about__decription--title {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.about__para {
+    font-size: 19px;
+    margin: 10px 0;
+    align-items: center;
+    width: calc(100% / 2);
+    margin: 0 auto;
+}
+
+
+/* FOOTER */
+
+#footer {
+   background-color: black;
+   color:white;
+   text-align: center;
+  margin-top: 12px;
+height: 30vh;
+width: 100%;
+padding: 40px 0;
+}
+
+.footer__personal-logo {
+    width: 80px;
+    height: 80px;
+    margin: 15px 0;
+}
+
+.footer__link {
+    font-size: 20px;
+  margin: 0 20px;
+}
+
+.footer__copyright {
+    font-size: 20px;
+    margin: 20px 0;
+}

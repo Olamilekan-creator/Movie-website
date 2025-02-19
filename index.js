@@ -1,4 +1,17 @@
-
+function movieHTML(novie) {
+    return `<div class="movie__wrapper">
+    <div class="movie">
+        <div class="movie__one">
+            <img src="./g2.jpg" class="movie1" alt="">
+            <div class="movie__wrapper--bg">
+            <div class="movie__description">
+            <h3 class="movie__description--title">Guardians of the Galaxy <br> Vol. 2</h3>
+            <p class="movie__para">The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.</p>
+            <button class="movie__btn click" onclick="toggleContrast()">Watch Now!</button>
+        </div>  
+        </div> 
+        </div>`
+}
 
 
 
