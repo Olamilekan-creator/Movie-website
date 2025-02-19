@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+body,
+html {
+    background-color: black;
+}
+
+#personal-logo {
+    width: 50px;
+    height: 50px;
+    line-height: 0.5;
+   margin: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   width: 100%;
+}
+
+ul {
+    display: flex;
+    margin: 0 20px;
+    padding: 0 20px;
+    line-height: 2.5;
+   
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style-type: none;
+    margin: 0 20px;
+    padding: 0 12px;
+}
+
+h1,
+p {
+    margin: 0;
+    padding: 10px;
+}
+
+button  {
+    cursor: pointer;
+}
+
+.nav__link--list {
+   font-size: 18px;
+}
+
+.login__btn {
+    width: 90px;
+    height: 35px;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  font-size: 17px;
+}
+
+.fa-solid {
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.search-bar {
+    margin: 0 30px;
+}
+
+/* HEADER */
+
+.header__img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+   width: 100%;
+   position: relative;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   display: flex;
+}
+
+.header__description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.header__description--title {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+   
+}
+
+.header__para {
+    position: absolute;
+  font-size: 20px;
+}
+
+/* MOVIE */
+
+.movie {
+position: absolute;
+display: flex;
+gap: 20px;
+align-items: center;
+
+}
+
+.movie__one {
+width: 15%;
+height: 35vh;
+border: 1px solid white;
+overflow: hidden;
+}
+
+.movie1 {
+    width: 100%;
+    height: 200px;
+}
+
+
