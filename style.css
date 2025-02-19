@@ -8,131 +8,212 @@
 
 body,
 html {
-    background-color: black;
+  background-color: black;
 }
 
 #personal-logo {
-    width: 50px;
-    height: 50px;
-    line-height: 0.5;
-   margin: 0 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 0.5;
+  margin: 0 20px;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   max-width: 1200px;
-   margin: 0 auto;
-   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav__link--anchor {
+  font-size: 16px;
+  color: #fff;
+}
+
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--black:after {
+  background-color: white;
+}
+
+.link__hover-effect:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 ul {
-    display: flex;
-    margin: 0 20px;
-    padding: 0 20px;
-    line-height: 2.5;
-   
+  display: flex;
+  margin: 0 20px;
+  padding: 0 20px;
+  line-height: 2.5;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 li {
-    list-style-type: none;
-    margin: 0 20px;
-    padding: 0 12px;
+  list-style-type: none;
+  margin: 0 20px;
+  padding: 0 12px;
 }
 
 h1,
 p {
-    margin: 0;
-    padding: 10px;
+  margin: 0;
+  padding: 10px;
 }
 
-button  {
-    cursor: pointer;
+button {
+  cursor: pointer;
+}
+
+.click {
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.click:hover {
+  transform: scale(1.1);
+}
+
+.click:active {
+  transform: scale(0.8);
 }
 
 .nav__link--list {
-   font-size: 18px;
+  font-size: 18px;
 }
 
 .login__btn {
-    width: 90px;
-    height: 35px;
+  width: 90px;
+  height: 35px;
   border-radius: 10px;
   background-color: ghostwhite;
   font-size: 17px;
 }
 
 .fa-solid {
-    margin: 0 30px;
-    font-size: 20px;
+  margin: 0 30px;
+  font-size: 20px;
 }
 
 .search-bar {
-    margin: 0 30px;
+  margin: 0 30px;
 }
 
 /* HEADER */
 
-.header__img {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-   width: 100%;
-   position: relative;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-   display: flex;
+.header {
+  background-image: url("./sunset-3189813_1280.jpg");
+  background-repeat: no-repeat;
+  height: calc(100vh - 54px);
+  background-size: cover;
+  background-position: center center;
+  height: 60vh;
+}
+
+.movie__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .header__description {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 60vh;
 }
 
 .header__description--title {
-    position: absolute;
-    font-size: 70px;
-    font-weight: 700;
-    display: flex;
-    align-items: baseline;
-   
-}
-
-.header__para {
-    position: absolute;
-  font-size: 20px;
-}
-
-/* MOVIE */
-
-.movie {
-position: absolute;
-display: flex;
-gap: 20px;
-align-items: center;
-
+  font-size: 70px;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
 }
 
 .movie__one {
-width: 15%;
-height: 35vh;
-border: 1px solid white;
-overflow: hidden;
+  width: 100%;
+  height: 35vh;
+  border: 1px solid white;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .movie1 {
-    width: 100%;
-    height: 200px;
+  width: 306.4px;
+  height: 343.34px;
+  transition: all 600ms ease;
 }
 
+.movie:hover .movie1 {
+  transform: scale(0.91);
+  filter: blur(5px);
+}
 
+.movie__wrapper:hover .movie__description--title {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.movie__wrapper .movie1 {
+  transform: scale(1.07);
+}
+
+.movie__description--title {
+  position: absolute;
+  top: 15%;
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0;
+  transition: opacity 300ms, transform 450ms ease;
+  font-size: 25px;
+}
+
+.movie__btn {
+  transition: opacity 300ms, transform 450ms ease;
+  opacity: 0;
+  font-size: 20px;
+  margin-right: 16px;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.movie__para {
+  transition: opacity 300ms, transform 450ms ease;
+  opacity: 0;
+  margin-top: 8px;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.movie__wrapper--bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.movie__wrapper .movie__wrapper--bg {
+  opacity: 0.7;
+}
