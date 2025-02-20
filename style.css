@@ -11,6 +11,11 @@ html {
   background-color: black;
 }
 
+body.high-contrast {
+    background-color: #000;
+    color: #FFF;
+}
+
 #landing-page {
     height: 100vh;
 }
@@ -19,7 +24,6 @@ html {
   width: 50px;
   height: 50px;
   line-height: 0.5;
-  margin: 0 20px;
 }
 
 .orange {
@@ -64,9 +68,8 @@ nav {
 }
 
 ul {
-  display: flex;
-  margin: 0 20px;
-  padding: 0 20px;
+ display: flex;
+
   line-height: 2.5;
 }
 
@@ -108,22 +111,72 @@ button {
   font-size: 18px;
 }
 
+
 .login__btn {
   width: 90px;
   height: 35px;
   border-radius: 10px;
   background-color: ghostwhite;
   font-size: 17px;
+  margin: 0 12px;
 }
 
-.fa-solid {
-  margin: 0 30px;
-  font-size: 20px;
+
+.search__bar {
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.search-bar {
-  margin: 0 30px;
+.movie__bar {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #242424;
+  padding: 10px 40px;
+  color: rgb(36, 62, 99);
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  z-index: 1;
+  transition: border-color 300ms;
 }
+
+.movie__bar::placeholder {
+  font-weight: 500;
+  color: rgb(158, 170, 189);
+}
+
+.movie__bar:hover {
+  border-color: rgba(160,174,192);
+}
+
+.movie__bar:focus,
+.movie__bar:active {
+    outline: yellow solid 2px;
+    outline-offset: 1px;
+}
+
+.btn__search {
+  z-index: 2;
+  border-radius: 500px;
+  width: 160px;
+  border: none;
+  background-color: #6415ff;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 300ms;
+}
+
+.btn__search:hover {
+  background-color: rgba(60,13,153);
+}
+
+
 
 /* HEADER */
 

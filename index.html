@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/97338600a8.js" crossorigin="anonymous"></script>
     <title>Movies</title>
 </head>
@@ -51,12 +51,13 @@
                     link__hover-effect--black
                     ">Contact</a>
                 </li>
-                <div class="nav__link search-bar">
+                <div class="search__bar">
+                    <input type="text" class="movie__bar" placeholder="Search for movies">
                     <a href="#" class="
-                    "><i class="fa-solid fa-magnifying-glass"></i>
+                    "><i class="fa-solid fa-magnifying-glass btn__search"></i>
                 </div>
                 <div class="click" onclick="toggleContrast()">
-                    <button class="login__btn">Login</button>           
+                    <button class="login__btn">Login</button>         
                 </div>
             </ul>
         </nav>
@@ -67,12 +68,12 @@
     <div class="movie__wrapper">
     <div class="movie">
         <div class="movie__one">
-            <img src="./g2.jpg" class="movie1" alt="">
+            <img id="moviePoster" src="./g2.jpg" class="movie1" alt="Movie Poster">
             <div class="movie__wrapper--bg">
             <div class="movie__description">
-            <h3 class="movie__description--title">Guardians of the Galaxy <br> Vol. 2</h3>
-            <p class="movie__para">The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.</p>
-            <button class="movie__btn click" onclick="toggleContrast()">Watch Now!</button>
+            <h3 id="movieTitle" class="movie__description--title">Guardians of the Galaxy <br> Vol. 2</h3>
+            <p id="movieDescription" class="movie__para">The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.</p>
+            <button class="movie__btn click" onclick="toggleContrast(event)">Watch Now!</button>
         </div>  
         </div> 
         </div> 
