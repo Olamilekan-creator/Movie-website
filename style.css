@@ -32,8 +32,8 @@ body.high-contrast {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -69,7 +69,18 @@ nav {
 
 ul {
   display: flex;
+  align-items: center;
+width: 100%;
+  gap: 40px;
   line-height: 2.5;
+  margin: 0 30px;
+}
+
+.nav__right {
+  display: flex;
+align-items: center;
+ margin: 0 20px;
+ gap: 40px;
 }
 
 a {
@@ -79,8 +90,6 @@ a {
 
 li {
   list-style-type: none;
-  margin: 0 20px;
-  padding: 0 12px;
 }
 
 h1,
@@ -108,21 +117,23 @@ button {
 
 .nav__link--list {
   font-size: 18px;
+  margin: 0 80px;
 }
 
 
 .login__btn {
   width: 90px;
-  height: 35px;
+  height: 40px;
+  align-items: center;
   border-radius: 10px;
   background-color: ghostwhite;
   font-size: 17px;
-  margin: 0 12px;
+  margin: 0 200px;
+  font-weight: bold;
 }
 
 .search__bar {
   width: 100%;
-  height: 7vh;
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -130,11 +141,10 @@ button {
 }
 
 .movie__bar {
-  width: 100%;
-  width: 200px;
+  width: 250px;
   height: 40px;
   border-radius: 7px;
-  border: 1px solid #242424;
+  border: 0.5px solid #242424;
   padding: 10px 0 10px 35px;
   color: #fff;
   font-size: 16px;
@@ -156,7 +166,7 @@ button {
 .movie__bar:focus,
 .movie__bar:active {
     outline: white solid 2px;
-    outline-offset: 1px;
+    outline-offset: 0.5px;
 }
 
 .btn__search {
