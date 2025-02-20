@@ -6,9 +6,10 @@ const movieDescription = document.getElementById('movieDescription');
 const moviePoster = document.getElementById('moviePoster');
 
 function searchMovie() {
-  const query = searchInput.ariaValueMax.trim();
+  const query = searchInput.value.trim();
   if (query) {
-    fetch(`http://www.omdbapi.com/?i=${tt3896198}&apikey=${4f56ff1f}`)
+    fetch(` https://omdbapi.com/?s=${searchTerm}&apikey=${ http://www.omdbapi.com/?i=tt3896198&apikey=4f56ff1f
+    }`)
     .then(response => response.json())
     .then(data => {
       if (data.Response === 'True') {
