@@ -342,6 +342,41 @@ padding: 40px 0;
 
 /* Small Phones, Tablets, Large Smartphones */
 
-@media (max-with: 1024px) {
-  
+@media (max-with: 768px) {
+  nav {
+    max-width: 740px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.nav__link--anchor,
+.link__hover-effect,
+.link__hover-effect--black {
+  display: none;
+}
+
+.login__btn {
+  display: none;
+}
+
+.logo {
+padding: 12px;
+}
+
+#landing-page {
+  max-width: 740px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#landing-page {
+  max-width: 740px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav__right {
+  margin: 0;
+  gap: 0;
+}
 }
