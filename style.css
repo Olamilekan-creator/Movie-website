@@ -349,9 +349,11 @@ padding: 40px 0;
     margin: 0 auto;
   }
 
-.nav__link--anchor,
-.link__hover-effect,
-.link__hover-effect--black {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  {
   display: none;
 }
 
@@ -379,4 +381,22 @@ padding: 12px;
   margin: 0;
   gap: 0;
 }
+
+button {
+  display: none;
+}
+}
+
+@media (max-width: 430px) {
+  #landing-page {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .header {
+max-width: 400px;
+width: 100%;
+margin: 0 auto;
+  }
 }
