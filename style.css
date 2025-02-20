@@ -17,7 +17,7 @@ body.high-contrast {
 }
 
 #landing-page {
-    height: 100vh;
+    height: 200vh;
 }
 
 #personal-logo {
@@ -187,7 +187,7 @@ margin: 0 12px;
   height: calc(100vh - 54px);
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 60vh;
 }
 
 .movie__wrapper {
@@ -273,7 +273,7 @@ font-weight: bold;
 }
 
 /* ABOUT */
-
+/* 
 .about__container {
     background-color: black;
     height: 100vh;
@@ -309,8 +309,8 @@ font-weight: bold;
   width: 100%;
   height: 70vh;
   position: relative;
-  padding: 17px 0;
-}
+  padding: 12px 0;
+} */
 
 /* FOOTER */
 
@@ -338,4 +338,10 @@ padding: 40px 0;
 .footer__copyright {
     font-size: 20px;
     margin: 20px 0;
+}
+
+/* Small Phones, Tablets, Large Smartphones */
+
+@media (max-with: 1024px) {
+  
 }
