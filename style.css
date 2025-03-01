@@ -224,7 +224,8 @@ position: relative;
   border-radius: 10px;
   background-color: greenyellow;
   margin-top: 20px;
- width: 70%;
+ max-width: 220px;
+ width: 100%;
  font-weight: bold;
  display: flex;
  justify-content: center;
@@ -296,11 +297,9 @@ position: relative;
   font-size: 25px;
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
-.right {
-  /* color: yellow; */
-}
 
 #recommended:hover,
 .right:hover {
@@ -314,7 +313,7 @@ transition: 0.3s ease;
   max-width: 100%;
   position: absolute;
   bottom: 40%;
-right: calc(1400px / 2);
+right: 700px;
 bottom: 20%;
 }
 
