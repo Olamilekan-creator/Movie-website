@@ -7,19 +7,42 @@ const movieWrapper = document.querySelector('.movie__wrapper'); // Select the co
 
 searchButton.addEventListener('click', searchMovie); // Add event listener
 
-// dots
-const dots = document.querySelectorAll('.dot');
-const carouselImg = document.querySelectorAll('.slide');
+// Carousel
+let slideIndex = 1;
 
-dots.forEach((dot, index) => {
-   dot.addEventListener('click', () => {
-      carouselImg.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(d => d.classList.remove('active'));
-      
-      carouselImg[index].classList.add('active');
-      dots[index].classList.add('active');
-   });
-});
+function moveSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlides(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("carousel__img");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slideIndex ++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000)
+    dots[slideIndex - 1].className += " active";
+}
+  
 
 function searchMovie() {
     const searchTerm = searchInput.value.trim(); // Use searchTerm instead of query

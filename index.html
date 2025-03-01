@@ -19,8 +19,8 @@
            <div class="logo">
                 <img src="./my logo.png" id="personal-logo" alt="">
             </div>
-            <div class="nav__link--list">
-            <ul>
+    <div>
+            <ul class="nav__link--list">
                 <li class="nav__link">
                     <a href="#" class="
                     nav__link--anchor
@@ -50,13 +50,12 @@
                     ">Contact</a>
                 </li>
             </ul>
-            </div>
-                <div class="nav__right">
+        </div>
+                
                     <div class="search__bar">
                         <span class="material-symbols-rounded btn__search">Search</span>
                     <input type="text" class="movie__bar" id="searchInput" placeholder="Search for movies">
                     <button class="login__btn click" onclick="toggleContrast()">Login</button>         
-                </div>
             </div>
             </div>
         </div>
@@ -65,19 +64,85 @@
             <div class="header__description">
             <h1 class="header__description--title">Hypernova Films</h1>
 </div>
+
     <div class="carousel">
+        <div class="carousel__img fade">
+        <img src="./sunset-3189813_1280.jpg" class="slide active">
         <div class="texts">
             <div class="texts__title">
-                <h1 class="texts__description">Best Movie</h1>
+                <h1 class="texts__description">Beautiful Sunset</h1>
                 <p class="texts__para">2012 Olamilekan Movie</p>
                 <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
             </div>
         </div>
-        <div class="carousel__img">
-        <img src="./sunset-3189813_1280.jpg" class="slide active">
+    </div>
+
+    <div class="carousel__img fade">
            <img src="./videoframe_13177.png" class="slide">
-         <img src="./ticket.jpg" class="slide">
+           <div class="texts">
+            <div class="texts__title">
+                <h1 class="texts__description">Nice Frame</h1>
+                <p class="texts__para">2012 Olamilekan Movie</p>
+                <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
+            </div>
         </div>
+        </div>
+
+           <div class="carousel__img fade">
+         <img src="./ticket.jpg" class="slide">
+         <div class="texts">
+            <div class="texts__title">
+                <h1 class="texts__description">Just a Ticket</h1>
+                <p class="texts__para">2012 Olamilekan Movie</p>
+                <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
+            </div>
+        </div>
+        </div>
+
+           <div class="carousel__img fade">
+         <img src="./assets/boy.webp" class="slide">
+         <div class="texts">
+            <div class="texts__title">
+                <h1 class="texts__description">Young Boy</h1>
+                <p class="texts__para">2012 Olamilekan Movie</p>
+                <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
+            </div>
+        </div>
+        </div>
+
+           <div class="carousel__img fade">
+         <img src="./assets/city.jpeg" class="slide">
+         <div class="texts">
+            <div class="texts__title">
+                <h1 class="texts__description">Such a Beautiful City</h1>
+                <p class="texts__para">2012 Olamilekan Movie</p>
+                <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
+            </div>
+        </div>
+        </div>
+
+           <div class="carousel__img fade">
+         <img src="./assets/family.webp" class="slide">
+         <div class="texts">
+            <div class="texts__title">
+                <h1 class="texts__description">Family</h1>
+                <p class="texts__para">2012 Olamilekan Movie</p>
+                <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
+            </div>
+        </div>
+        </div>
+
+           <div class="carousel__img fade">
+         <img src="./assets/man.jpeg" class="slide">
+         <div class="texts">
+            <div class="texts__title">
+                <h1 class="texts__description">Gentleman</h1>
+                <p class="texts__para">2012 Olamilekan Movie</p>
+                <button class="watch"><span class="material-symbols-rounded font">play_circle</span> Watch Now <span class="free">FREE</span></button>
+            </div>
+        </div>
+        </div>
+
         <div class="dots">
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
@@ -87,9 +152,10 @@
             <span class="dot" onclick="currentSlide(6)"></span>
             <span class="dot" onclick="currentSlide(7)"></span>
         </div>
-            <button class="carousel-btn prev click" onClick="moveSlide(-1)">❮</button>
-            <button class="carousel-btn next click" onClick="moveSlide(1)">❯</button>
+            <button class="carousel-btn prev click" onClick="moveSlides(-1)">&#10094</button>
+            <button class="carousel-btn next click" onClick="moveSlides(1)">&#10095</button>
     </div>
+
     <div id="recommended">
         Recommended Movies <span class="material-symbols-rounded right">Chevron_right</span>
     </div>
