@@ -7,6 +7,20 @@ const movieWrapper = document.querySelector('.movie__wrapper'); // Select the co
 
 searchButton.addEventListener('click', searchMovie); // Add event listener
 
+// dots
+const dots = document.querySelectorAll('.dot');
+const carouselImg = document.querySelectorAll('.slide');
+
+dots.forEach((dot, index) => {
+   dot.addEventListener('click', () => {
+      carouselImg.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      
+      carouselImg[index].classList.add('active');
+      dots[index].classList.add('active');
+   });
+});
+
 function searchMovie() {
     const searchTerm = searchInput.value.trim(); // Use searchTerm instead of query
     if (searchTerm) {
@@ -62,3 +76,4 @@ function displayMovieData(movie) {
 function toggleContrast(event) {
     event.target.classList.toggle('clicked');
 }
+
