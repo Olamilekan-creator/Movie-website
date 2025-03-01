@@ -265,6 +265,11 @@ position: relative;
   font-size: 40px;
 }
 
+.carousel-btn:hover {
+  color: yellowgreen;
+  transition: 0.3s ease;
+}
+
 .prev {
   left: 10px;
   color: white;
