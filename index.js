@@ -98,20 +98,20 @@ function displayMovieData(movie) {
 
   // Create movie element dynamically
   const movieDiv = document.createElement("div");
-  movieDiv.classList.add("movie");
+  movieDiv.classList.add("new__movie");
   movieDiv.innerHTML = `
-        <div class="movie__one">
-            <img src="${
-              Poster !== "N/A" ? Poster : "./g2.jpg"
-            }" class="movie1" alt="Movie Poster">
-            <div class="movie__wrapper--bg">
-                <div class="movie__description">
-                    <h3 class="movie__description--title">${Title} <br> ${Year}</h3>
-                    <p class="movie__para">${Plot}</p>
-                    <button class="movie__btn click" onclick="toggleContrast(event)">Watch Now!</button>
-                </div>
-            </div>
-        </div>
+            <div class="new__movie--one">
+                <img src="${
+                  Poster !== "N/A" ? Poster : "./g2.jpg"
+                }" class="movie1" alt="Movie Poster">
+                <div class="new__movie__wrapper-bg">
+                <div class="new__movie--description">
+                <h3 id="movieTitle" class="new__description--title">${Title}<br> ${Year}</h3>
+                <p id="movieDescription" class="new__movie--para">${Plot}</p>
+                <button class="new__btn click" onclick="toggleContrast(event)">Watch Now!</button>
+            </div>  
+            </div> 
+            </div> 
     `;
 
   movieWrapper.appendChild(movieDiv); // Append the new movie element to the wrapper
@@ -120,3 +120,40 @@ function displayMovieData(movie) {
 function toggleContrast(event) {
   event.target.classList.toggle("clicked");
 }
+
+// Recommended movie
+
+const movies = [
+    { title: "Guardians of the Galaxy Vol. 2", description: "The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.", imgSrc: "./g2.jpg" },
+    { title: "Movie Title 2", description: "Description 2", imgSrc: "./g3.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    // Add more movie objects here!
+];
+
+const movieContainer = document.querySelector('.new__wrapper');
+
+movies.forEach(movie => {
+    const movieBox = document.createElement('div');
+    movieBox.classList.add('new__movie');
+
+    movieBox.innerHTML = `
+        <div class="new__movie--one">
+            <img id="moviePoster" src="${movie.imgSrc}" class="new__movie1" alt="Movie Poster">
+            <div class="new__movie__wrapper-bg">
+                <div class="new__movie--description">
+                    <h3 id="movieTitle" class="new__description--title">${movie.title}</h3>
+                    <p id="movieDescription" class="new__movie--para">${movie.description}</p>
+                    <button class="new__btn click" onclick="toggleContrast(event)">Watch Now!</button>
+                </div>  
+            </div> 
+        </div>
+    `;
+
+    movieContainer.appendChild(movieBox);
+});
