@@ -108,7 +108,7 @@ function displayMovieData(movie) {
                 <div class="new__movie--description">
                 <h3 id="movieTitle" class="new__description--title">${Title}<br> ${Year}</h3>
 <span class="material-symbols-rounded new__btn click" onclick="toggleContrast(event)">play_circle</span>
-                        <a href="#" class="more">More <span class="orange details">Details...</span></a>
+                        <a href="./details.html" class="more">More <span class="orange details">Details...</span></a>
             </div>  
             </div> 
             </div> 
