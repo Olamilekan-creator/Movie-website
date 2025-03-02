@@ -3,7 +3,7 @@ const searchInput = document.querySelector(".movie__bar"); // Corrected selector
 const movieTitle = document.getElementById("movieTitle");
 const movieDescription = document.getElementById("movieDescription");
 const moviePoster = document.getElementById("moviePoster");
-const movieWrapper = document.querySelector(".movie__wrapper"); // Select the container
+const movieWrapper = document.querySelector(".new__wrapper"); // Select the container
 
 searchButton.addEventListener("click", searchMovie); // Add event listener
 
@@ -94,7 +94,7 @@ function searchMovie() {
 }
 
 function displayMovieData(movie) {
-  const { Title, Year, Plot, Poster } = movie;
+  const { Title, Year, Poster } = movie;
 
   // Create movie element dynamically
   const movieDiv = document.createElement("div");
@@ -107,8 +107,8 @@ function displayMovieData(movie) {
                 <div class="new__movie__wrapper-bg">
                 <div class="new__movie--description">
                 <h3 id="movieTitle" class="new__description--title">${Title}<br> ${Year}</h3>
-                <p id="movieDescription" class="new__movie--para">${Plot}</p>
-                <button class="new__btn click" onclick="toggleContrast(event)">Watch Now!</button>
+<span class="material-symbols-rounded new__btn click" onclick="toggleContrast(event)">play_circle</span>
+                        <a href="#" class="more">More <span class="orange details">Details...</span></a>
             </div>  
             </div> 
             </div> 
@@ -124,15 +124,15 @@ function toggleContrast(event) {
 // Recommended movie
 
 const movies = [
-    { title: "Guardians of the Galaxy Vol. 2", description: "The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.", imgSrc: "./g2.jpg" },
-    { title: "Movie Title 2", description: "Description 2", imgSrc: "./g3.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
-    { title: "Movie Title 3", description: "Description 3", imgSrc: "./g4.jpg" },
+    { title: "Guardians of the Galaxy Vol. 2", imgSrc: "./g2.jpg" },
+    { title: "Movie Title 2", imgSrc: "./g3.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
+    { title: "Movie Title 3", imgSrc: "./g4.jpg" },
     // Add more movie objects here!
 ];
 
@@ -148,8 +148,8 @@ movies.forEach(movie => {
             <div class="new__movie__wrapper-bg">
                 <div class="new__movie--description">
                     <h3 id="movieTitle" class="new__description--title">${movie.title}</h3>
-                    <p id="movieDescription" class="new__movie--para">${movie.description}</p>
-                    <button class="new__btn click" onclick="toggleContrast(event)">Watch Now!</button>
+                    <span class="material-symbols-rounded new__btn click" onclick="toggleContrast(event)">play_circle</span>
+                        <a href="#" class="more">More <span class="orange details">Details...</span></a>
                 </div>  
             </div> 
         </div>

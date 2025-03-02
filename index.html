@@ -12,6 +12,7 @@
     <title>Movies</title>
 </head>
 <body>
+    <a href="./recommend.html"></a>
     <section id="landing-page">
         <div class="nav__row">
         <nav>
@@ -53,8 +54,7 @@
         </div>
                 
                     <div class="search__bar">
-                        <!-- <a href="#" target="_blank"> -->
-                            <span class="material-symbols-rounded btn__search">Search</span></a>
+                            <span class="material-symbols-rounded btn__search">Search</span>
                     <input type="text" class="movie__bar" id="searchInput" placeholder="Search for movies">
                     <button class="login__btn click" onclick="toggleContrast()">Login</button>         
             </div>
@@ -154,7 +154,7 @@
             <button class="carousel-btn next click" onClick="moveSlides(1)">&#10095</button>
     </div>
 
-    <a href="#" target="_blank" class="recommend">
+    <a href="./recommend.html" class="recommend">
     <div id="recommended">Recommended Movies <span class="right">&#10095</span>
     </div></a>
 
@@ -165,8 +165,8 @@
             <div class="movie__wrapper--bg">
             <div class="movie__description">
             <h3 id="movieTitle" class="movie__description--title">Guardians of the Galaxy <br> Vol. 2</h3>
-            <p id="movieDescription" class="movie__para">The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.</p>
-            <button class="movie__btn click" onclick="toggleContrast(event)">Watch Now!</button>
+            <button class="movie__btn click" onclick="toggleContrast(event)">
+                <span class="material-symbols-rounded ">play_circle</span></button>
         </div>  
         </div> 
         </div> 
@@ -177,8 +177,7 @@
                 <div class="movie__wrapper--bg">
                     <div class="movie__description">
                     <h3 class="movie__description--title">Captain America<br>The Winter Soldier</h3>
-                    <p class="movie__para">Steve Rogers uncovers a conspiracy within S.H.I.E.L.D. while facing the mysterious Winter Soldier, revealing dark truths about his past.</p>
-                    <button class="movie__btn click" onclick="toggleContrast()">Watch Now!</button>
+                   <button class="movie__btn click" onclick="toggleContrast()">Watch Now!</button>
                 </div>  
                 </div> 
             </div>  
@@ -230,34 +229,6 @@
     </div>
 </div>
 </div>
-</section>
-
-<section id="new__page">
-    <div class="new__page--container">
-        <div class="new__row">
-    <div class="new__page--description">
-        Recommended
-    </div>
-    <p class="new__para">We sorted these out for you.</p>
-    <hr class="new__line">
-
-    <div class="new__wrapper">
-        <div class="new__movie">
-            <div class="new__movie--one">
-                <img id="moviePoster" src="./g2.jpg" class="new__movie1" alt="Movie Poster">
-                <div class="new__movie__wrapper-bg">
-                <div class="new__movie--description">
-                <h3 id="movieTitle" class="new__description--title">Guardians of the Galaxy <br> Vol. 2</h3>
-                <p id="movieDescription" class="new__movie--para">The Guardians face new challenges, encounter Peter Quill's father, Ego, and uncover secrets, strengthening their bond as a family.</p>
-                <button class="new__btn click" onclick="toggleContrast(event)">Watch Now!</button>
-            </div>  
-            </div> 
-            </div> 
-            </div> 
-            </div>
-
-    </div> 
-    </div>
 </section>
 
 <footer id="footer">
