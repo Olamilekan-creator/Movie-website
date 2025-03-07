@@ -16,6 +16,25 @@
         <div class="nav__row">
         <nav>
             <div class="nav__container">
+
+                <div class="overlay__btn">
+                    <span class="btn__menu material-symbols-rounded" onclick="openMenu()">menu</span>
+                   
+                    <div class="menu__backdrop" onclick="closeMenu()"> <span class="material-symbols-rounded menu__close click">close</span>
+                        <div class="menu__search">
+                            <a href="./recommend.html"><span class="material-symbols-rounded menu__search--btn">Search</span></a>
+                    <input type="text" class="search__input" id="searchInput" placeholder="Search for movies">
+                </div>
+                        <ul class="menu__links">
+                            <li class="menu__list"><a href="./index.html" class="menu__link" onclick="closeMenu()">Home</a></li>
+                            <li class="menu__list"><a href="#recommended" class="menu__link" onclick="closeMenu()">Movies</a></li>
+                            <li class="menu__list"><a href="#about" class="menu__link no-cursor" onclick="closeMenu()">About Us</a></li>
+                            <li class="menu__list"><a href="mailto:olamilekan.akinlusi@icloud.com" class="menu__link" onclick="closeMenu()">Contact</a></li>
+                            <button class="login__menu--btn click" onclick="toggleContrast()">Login</button> 
+                        </ul>
+                </div>
+                </div>
+
            <div class="logo">
                 <img src="./my logo.png" id="personal-logo" alt="">
             </div>
@@ -51,13 +70,14 @@
                 </li>
             </ul>
         </div>
-                
-                    <div class="search__bar">
-                        <!-- <a href="#" target="_blank"> -->
-                            <span class="material-symbols-rounded btn__search search">Search</span></a>
-                    <input type="text" class="movie__bar" id="searchInput" placeholder="Search for movies">
-                    <button class="login__btn click" onclick="toggleContrast()">Login</button>         
-            </div>
+
+        <div class="search__container">
+            <div class="search__bar">
+                    <a href="./recommend.html"><span class="material-symbols-rounded btn__search">Search</span></a>
+            <input type="text" class="movie__bar" id="searchInput" placeholder="Search for movies">
+        </div>
+            <button class="login__btn click" onclick="toggleContrast()">Login</button>         
+    </div>
             </div>
         </div>
         </nav>
