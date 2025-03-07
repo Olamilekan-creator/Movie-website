@@ -7,6 +7,17 @@ const movieWrapper = document.querySelector(".new__wrapper"); // Select the cont
 
 searchButton.addEventListener("click", searchMovie); // Add event listener
 
+// menu open and close
+
+function openMenu() {
+  document.body.classList += "menu--open"
+  }
+  
+  function closeMenu() {
+  document.body.classList.remove('menu--open')
+  }
+
+
 // Carousel1
 document.addEventListener("DOMContentLoaded", function () {
   // Hide all slides except the first one on page load
@@ -149,7 +160,7 @@ movies.forEach(movie => {
                 <div class="new__movie--description">
                     <h3 id="movieTitle" class="new__description--title">${movie.title}</h3>
                     <span class="material-symbols-rounded new__btn click" onclick="toggleContrast(event)">play_circle</span>
-                        <a href="#" class="more">More <span class="orange details">Details...</span></a>
+                        <a href="./details.html" class="more">More <span class="orange details">Details...</span></a>
                 </div>  
             </div> 
         </div>
